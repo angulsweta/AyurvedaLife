@@ -1,0 +1,282 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+    Layout = "master.cshtml";
+    var backgroundImage = Model.HeroBackgroundImage != null ? Model.HeroBackgroundImage.Url : String.Empty;
+}
+<section class="section section--full-height background-image-full overlay overlay--dark section--content-center section--thick-border"
+         style="background-image: url('@backgroundImage')">
+    <div class="section__hero-content">
+        <h1>@Model.HeroHeader</h1>
+        <p class="section__description">@Model.HeroDescription</p>
+        @if (Model.HeroCtalink != null)
+        {
+            <a class="button button--border--solid" href="@Model.HeroCtalink.Url">
+                @Model.HeroCtacaption
+            </a>
+        }
+    </div>
+</section>
+
+<section class="section section">
+    @Html.GetGridHtml(Model, "bodyText", "bootstrap3-fluid")
+</section>
+<section>
+  
+   <div class="container" style="margin-top:100px;">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/hand.jpg" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Cure in Hand Points</h2>
+                    <p>There are said to be 107 marma points on the body, each serving a particular purpose, and each with its own name and specific way of massaging it. Different oils are used depending upon each person's Ayurvedic dosha type. Marma points are measured in anguli or 'finger units'.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/HomeItem.jpg" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Ayurvedic Products</h2>
+                    <p>Ayurveda is based on the belief that health and wellness depend on a delicate balance between the mind, body, and spirit. Its main goal is to promote good health, not fight disease. But treatments may be geared toward specific health problems.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/Three_dosas.png" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Three Doshas</h2>
+                    <p>The human body and mind are intricately connected in such a way that the mind has the power to heal and transform the body. Incorrect diets are believed to be behind seventy percent of ailments while the remaining causes include lifestyle, negative emotions and thoughts, hereditary or genetic issues and energy imbalances. Ayurvedic treatments are aimed at revealing the deeper and primary causes of an individual’s health conditions. At birth, every human being is blessed with a unique proportion of the three doshas or biologic principles namely - vata, pitta, kapha.</p>
+                    <p><a class="btn btn-secondary" href="/three-doshas" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+               <div class="row">
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/Herbal Nutrition.jpg" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Herbal Nutrition</h2>
+                    <p>Specific adjustments for individual requirements may need to be made, e.g., food allergies, strength of agni, seas on of the year and degree of dosha predominance or aggravation..</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/tounge.jpg" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Toungue Disease</h2>
+                    <p>According to Ayurveda the tongue is not just an organ of taste only but also a strong tool for diagnosis. Tongue analysis is a part of Ayurvedic diagnosis complementary with pulse, nails, eye, face etc. Tongue is also called a window of the inner system. Ayurveda says, read your tongue and know your health status.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img class="rounded-circle" src="image/Healthy LifeStyle.jpg" alt="Generic placeholder image" width="250" height="250">
+                    <h2>Healthy Life Style</h2>
+                    <p>The good habits that add health to your years according to Ayurveda include eating three balanced meals at the same time daily. Lunch should be the heaviest meal and dinner lightest and about 3 hours prior to your bedtime. Some form of moderate exercise daily is a must as is meditation.</p>
+                    <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+
+              <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" src="image/Saffron.jpg" alt="Herbal Fluid">
+                                <div class="card-body">
+                                    <p class="card-text">Saffron is a spice derived from the flowers of the saffron crocus (Crocus sativus), also known as kumkum and kesar. Saffron milk is popularly known as kesar milk. It reduces all the vitiated doshas as it is tridoshahara (balance all three doshas).It improves skin tone and complexion. It has anti-inflammatory properties & anti-microbial properties. It improves vision & acts as a brain tonic.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" src="image/CinnamonRaw.jpg" alt="Cinnamon">
+                                <div class="card-body">
+                                    <p class="card-text">A warming spice with sweet, pungent, and bitter flavors, cinnamon is excellent at revving up the digestion. Because of its warming properties, it's pacifying for Kapha and good for balancing Vata as well. In Ayurveda, cinnamon is used in a variety of different ways to balance digestion and pacify the stomach, helps Clear Respiratory Passages & promotes Healthy Circulation & Joints.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" src="images/ayurimgs/c5.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" src="images/ayurimgs/c6.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                 <img class="card-img-top" src="images/ayurimgs/c8.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                <img class="card-img-top" src="images/ayurimgs/c9.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                               <img class="card-img-top" src="images/ayurimgs/c10.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                 <img class="card-img-top" src="images/ayurimgs/c9.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card mb-4 box-shadow">
+                                 <img class="card-img-top" src="images/ayurimgs/c3.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                        </div>
+                                        <small class="text-muted">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+             
+           
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="images/ayurimgs/c10.jpg" alt="Generic placeholder image">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img class="featurette-image img-fluid mx-auto" src="images/ayurimgs/c11.jpg" alt="Generic placeholder image">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid mx-auto" src="images/ayurimgs/c11.jpg" alt="Generic placeholder image">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->  
+    
+    
+    
+</section>
+
+<section class="section section--themed">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="ta-center">
+                <h2>@Model.FooterHeader</h2>
+                <p class="section__description mw-640 ma-h-auto">@Model.FooterDescription</p>
+
+                <a class="button button--border--light_solid" href="@Model.FooterCtalink.Url">
+                    @Model.FooterCtacaption
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
