@@ -285,6 +285,8 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
+    <Content Include="Image\Ayurvedic Nutrition.jpg" />
+    <Content Include="Image\Cardamom.jpg" />
     <Content Include="Image\Cinnamon.jpg" />
     <Content Include="Image\CinnamonRaw.jpg" />
     <Content Include="Image\hand.jpg" />
@@ -295,9 +297,11 @@
     <Content Include="Image\Herbal Nutrition.jpg" />
     <Content Include="Image\HomeItem.jpg" />
     <Content Include="Image\Nature Gift.jpg" />
+    <Content Include="Image\Nutrition.jpg" />
     <Content Include="Image\organs.jpg" />
     <Content Include="Image\Saffron.jpg" />
     <Content Include="Image\Seven Chakra.jpg" />
+    <Content Include="Image\Seven Chakras.jpg" />
     <Content Include="Image\thai-herbal.png" />
     <Content Include="Image\Therapy.jpeg" />
     <Content Include="Image\Three_dosas.png" />

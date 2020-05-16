@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "358bc686b82bd7ca")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.7")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "58bb36a4c0ec5e73")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -735,7 +735,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
 		[ImplementPropertyType("contactForm")]
-		public string ContactForm => this.Value<string>("contactForm");
+		public object ContactForm => this.Value("contactForm");
 
 		///<summary>
 		/// Contact Form Header
@@ -1010,7 +1010,7 @@ namespace Umbraco.Web.PublishedModels
 		public string UmbracoExtension => this.Value<string>("umbracoExtension");
 
 		///<summary>
-		/// Upload image
+		/// Upload Image
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.6.1")]
 		[ImplementPropertyType("umbracoFile")]
