@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Ingredients>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+<section class="section">
+
+    <div class="container">
+
+        <div class="product-grid">
+            @if (Model.FeaturedProducts != null)
+            {
+                foreach (Ingredient ingredient in Model.FeaturedProducts)
+                {
+                    <a href="@product.Url" class="product-grid__item" style="background-image: url('@ingredient.Photos.Url')">
+                        <div class="product-grid__item__overlay">
+                            <div class="product-grid__item__name">@ingredient.IngredientName</div>
+                            
+                        </div>
+                    </a>
+                }
+            }
+        </div>
+    </div>
+
+</section>

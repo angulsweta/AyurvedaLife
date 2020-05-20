@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Ingredient>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+}
+@Html.Partial("~/Views/Partials/SectionHeader.cshtml", Model.Parent)
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-image-container">
+                    <img class="product-image" src="@Model.Photos.Url" alt="@Model.IngredientName image" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>@Model.IngredientName</h1>
+                <div class="product-teaser">@Model.Description</div>
+             
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section section--sand">
+    <div class="container">
+        <!-- todo: Check if grid is empty via a property value converter -->
+        @Html.GetGridHtml(Model, "bodyText", "bootstrap3-fluid")
+    </div>
+</section>
